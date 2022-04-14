@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shortener App</title>
+</head>
+<body>
+    {% if urls_list %}
+        <h1><center>Stored URLs:</center></h1>
+        <div style="text-align:center;">
+            <table border="1" style="margin: 0 auto;">
+                <tr style="background-color: aqua;">
+                    <th>Shortened</th>
+                    <th>URL</th>
+                </tr>
+                {% for url in urls_list %}
+                    <tr>
+                        <td><a href="{{ url.shortened }}">{{ url.shortened }}</a> </td>
+                        <td><img src="https://www.google.com/s2/favicons?domain={{ url.URL }}"/> {{ url.URL }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    {% else %}
+        <h1><center>There are no URLs stored</center></h1>
+    {% endif %}
+
+    <br/><br/>
+    <hr>
+    <p><center>Generate new shortened URL:</center></p>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <center>{{ form.as_p }}</center>
+        <center><button type="submit">Generate</button><br/></center>
+    </form>
+</body>
+</html>
