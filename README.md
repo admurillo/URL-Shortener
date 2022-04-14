@@ -15,14 +15,14 @@ URL Shortener aplication developed using Django and Python 3 as a college projec
 <p>Password: *****</p>
 <p>Password (again): *****</p>
 <p>NOTE: Password is not showed while you are writing it.</p>
-<h3>Run application</h3>
+<h1 align="center">RUN APPLICATION</h1>
 <p>Now, you can run the program with the following line: </p>
 <p align="center">>> python3 manage.py runserver {port number}</p>
 <p>NOTE: If you don't specify port number, it will run at port 8000.</p>
 <p>From now on, we will use port 8000.</p>
 <p>Open your browser and go to <i>locahost:8000/</i>. This is the main page where stored URLs and their shortened resources will be shown. You can add a new URL using the formulary, it will generate a random resource for the specified URL.</p>
 <p>If you click on one shortened resource or write it in your browser, it will redirect you to the associated URL. For example:</p>
-<table>
+<table align="center">
   <tr>
     <th>Shortened</th>
     <th>URL</th>
